@@ -53,7 +53,7 @@ Everything — from the ASCII banner to the typing animation — is implemented 
    Swap the font link in the `<head>` for another monospaced option:
    ```html
    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-   Adjust background-color or color in the CSS for a different aesthetic.
+Adjust `background-color` or `color` in the CSS for a different aesthetic.
 3. **Add or remove commands**  
    Just add new key/value pairs to the `commands` object:
    ```js
