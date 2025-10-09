@@ -1,8 +1,8 @@
-# 🧠 Single-file Terminal Portfolio
+# 🧠 Free Space Terminal Portfolio
 
 A minimalist **interactive terminal-style portfolio**, built entirely in a **single HTML file** — no frameworks, no build tools, no external JavaScript dependencies.
 
-![screenshot](https://repository-images.githubusercontent.com/1072892475/15c0a081-98bd-46c9-9e08-8eee168d8928) <!-- Optional screenshot -->
+![screenshot](https://github.com/lynx6six/terminal-portfolio/raw/main/screenshot.png) <!-- Optional screenshot, replace or remove -->
 
 ---
 
@@ -24,7 +24,7 @@ Everything — from the ASCII banner to the typing animation — is implemented 
 - 🎨 **Retro aesthetic** – green-on-black terminal with OCR-A / Roboto Mono style  
 - 🧩 **Font Awesome integration** – clean icons for skills and tech stack  
 - 🧼 **Persistent banner** – banner reappears after `clear` command  
-- 🔗 **Clickable links** – contact and project URLs open in a new tab
+- 🔗 **Clickable links** – contact and project URLs open in a new tab  
 
 ---
 
@@ -49,13 +49,64 @@ Everything — from the ASCII banner to the typing animation — is implemented 
    ```js
    about: `I'm Free Space — an IT professional passionate about automation and efficient systems.`,
    contact: `<i class="fa-solid fa-envelope"></i> <a href="mailto:your@email.com">your@email.com</a>`
+   ```
+
 2. **Change the font or theme**  
    Swap the font link in the `<head>` for another monospaced option:
    ```html
    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-**Adjust `background-color` or `color` in the CSS for a different aesthetic.**
+   ```
+   Adjust `background-color` or `color` in the CSS for a different aesthetic.
+
 3. **Add or remove commands**  
    Just add new key/value pairs to the `commands` object:
    ```js
    commands["music"] = "Currently listening to: Gojira 🎸";
+   ```
 
+---
+
+## 🛠️ How to Run
+
+Simply open the HTML file in your browser:
+
+```bash
+open index.html
+```
+
+Or use a simple local server (optional):
+```bash
+python3 -m http.server
+```
+
+Then visit [http://localhost:8000](http://localhost:8000)
+
+---
+
+## 💡 Future Ideas
+
+- Move command data into a `data.json` file and load dynamically  
+- Add smooth “boot-up” animation or terminal intro  
+- Optional dark/light theme toggle  
+- Integration with real project data from GitHub API  
+
+---
+
+## 📦 Repository
+
+👉 **GitHub:** [github.com/lynx6six/terminal-portfolio](https://github.com/lynx6six/terminal-portfolio)
+
+---
+
+## 🪪 License
+
+This project is open-source and free to use under the [MIT License](LICENSE).  
+Credit appreciated if you use or modify this template!
+
+---
+
+### 💬 Acknowledgements
+
+- Fonts: [Google Fonts](https://fonts.google.com/)  
+- Icons: [Font Awesome](https://fontawesome.com/)  
+- Concept & design: [**Free Space**](https://github.com/lynx6six)
