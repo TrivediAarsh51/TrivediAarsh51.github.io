@@ -2,7 +2,7 @@
 
 A minimalist **interactive terminal-style portfolio**, built entirely in a **single HTML file** — no frameworks, no build tools, no external JavaScript dependencies.
 
-![screenshot](https://user-images.githubusercontent.com/yourusername/terminal-portfolio-preview.png) <!-- Optional screenshot -->
+![screenshot](https://repository-images.githubusercontent.com/1072892475/15c0a081-98bd-46c9-9e08-8eee168d8928) <!-- Optional screenshot -->
 
 ---
 
