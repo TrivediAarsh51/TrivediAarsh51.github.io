@@ -94,7 +94,7 @@ Then visit [http://localhost:8000](http://localhost:8000)
 
 ## 📦 Repository
 
-👉 **GitHub:** [github.com/lynx6six/terminal-portfolio](https://github.com/lynx6six/Single-file-Terminal-Portfolio)
+👉 **GitHub:** [github.com/lynx6six/Single-file-Terminal-Portfolio](https://github.com/lynx6six/Single-file-Terminal-Portfolio)
 
 ---
 
