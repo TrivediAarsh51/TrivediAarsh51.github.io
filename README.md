@@ -49,3 +49,9 @@ Everything — from the ASCII banner to the typing animation — is implemented 
    ```js
    about: `I'm Free Space — an IT professional passionate about automation and efficient systems.`,
    contact: `<i class="fa-solid fa-envelope"></i> <a href="mailto:your@email.com">your@email.com</a>`
+2. **Change the font or theme**  
+   Swap the font link in the `<head>` for another monospaced option:
+   ```html
+   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+   
