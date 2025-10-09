@@ -1,4 +1,4 @@
-# 🧠 Free Space Terminal Portfolio
+# 🧠 lynx6six Terminal Portfolio
 
 A minimalist **interactive terminal-style portfolio**, built entirely in a **single HTML file** — no frameworks, no build tools, no external JavaScript dependencies.
 
@@ -47,7 +47,7 @@ Everything — from the ASCII banner to the typing animation — is implemented 
 1. **Edit your information**  
    Inside the `<script>` section, update the `commands` object:
    ```js
-   about: `I'm Free Space — an IT professional passionate about automation and efficient systems.`,
+   about: `I'm lynx6six — an IT professional passionate about automation and efficient systems.`,
    contact: `<i class="fa-solid fa-envelope"></i> <a href="mailto:your@email.com">your@email.com</a>`
    ```
 
@@ -94,7 +94,7 @@ Then visit [http://localhost:8000](http://localhost:8000)
 
 ## 📦 Repository
 
-👉 **GitHub:** [github.com/lynx6six/terminal-portfolio](https://github.com/lynx6six/terminal-portfolio)
+👉 **GitHub:** [github.com/lynx6six/terminal-portfolio](https://github.com/lynx6six/Single-file-Terminal-Portfolio)
 
 ---
 
@@ -109,4 +109,4 @@ Credit appreciated if you use or modify this template!
 
 - Fonts: [Google Fonts](https://fonts.google.com/)  
 - Icons: [Font Awesome](https://fontawesome.com/)  
-- Concept & design: [**Free Space**](https://github.com/lynx6six)
+- Concept & design: [**lynx6six**](https://github.com/lynx6six)
