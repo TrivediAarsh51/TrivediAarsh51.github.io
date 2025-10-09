@@ -1,6 +1,11 @@
 # 🧠 lynx6six Terminal Portfolio
 
+[![Live Demo](https://img.shields.io/badge/demo-online-green?style=for-the-badge&logo=github)](https://lynx6six.github.io/Single-file-Terminal-Portfolio/)
+
 A minimalist **interactive terminal-style portfolio**, built entirely in a **single HTML file** — no frameworks, no build tools, no external JavaScript dependencies.
+
+🎮 **Live Demo:**  
+👉 [https://lynx6six.github.io/Single-file-Terminal-Portfolio/](https://lynx6six.github.io/Single-file-Terminal-Portfolio/)
 
 ![screenshot](https://repository-images.githubusercontent.com/1072892475/15c0a081-98bd-46c9-9e08-8eee168d8928) <!-- Optional screenshot, replace or remove -->
 
