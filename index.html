@@ -3,18 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>lynx6six Terminal Portfolio</title>
+<title>Lynx6six Terminal Portfolio</title>
 
-<!-- Font -->
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/ocr-a-std" rel="stylesheet">
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 <style>
+  :root {
+    --fg: #00ff88;
+    --accent: #00ffaa;
+  }
+
   body {
     background-color: #0d0d0d;
-    color: #00ff88;
+    color: var(--fg);
     font-family: 'Roboto Mono', monospace;
     letter-spacing: 0.05em;
     margin: 0;
@@ -31,13 +37,13 @@
   }
 
   .prompt {
-    color: #00ffaa;
+    color: var(--accent);
   }
 
   input {
     background: none;
     border: none;
-    color: #00ff88;
+    color: var(--fg);
     font-family: inherit;
     font-size: 1em;
     width: 80%;
@@ -45,12 +51,12 @@
   }
 
   ::selection {
-    background: #00ff88;
+    background: var(--fg);
     color: #000;
   }
 
   a {
-    color: #00ffaa;
+    color: var(--accent);
     text-decoration: none;
   }
   a:hover {
@@ -58,9 +64,60 @@
   }
 
   .banner {
-    color: #00ffaa;
+    color: var(--accent);
     font-weight: bold;
     margin-bottom: 1em;
+  }
+
+  .banner-ascii {
+    white-space: pre;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .banner-ocr {
+    display: none;
+    font-family: 'OCR A Std', monospace;
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+    line-height: 1.3em;
+    white-space: normal;
+  }
+
+  .banner-ocr code {
+    font-size: 0.9em;
+  }
+
+  @media (max-width: 700px) {
+    .banner-ascii {
+      display: none;
+    }
+    .banner-ocr {
+      display: block;
+    }
+
+    /* Scale terminal and text down for small screens */
+    body {
+      font-size: 0.85em;
+    }
+
+    #terminal {
+      transform: scale(0.9);
+      transform-origin: top left;
+      padding: 15px;
+    }
+
+    input {
+      font-size: 0.9em;
+    }
+
+    .banner-ocr {
+      font-size: 1.6em;
+      margin-bottom: 0.5em;
+    }
+
+    .banner-ocr code {
+      font-size: 0.9em;
+    }
   }
 
   .typed-line {
@@ -69,14 +126,22 @@
   }
 
   i {
-    color: #00ffaa;
+    color: var(--accent);
     margin-right: 6px;
   }
+  .banner-ocr .banner-subtext {
+    display: inline-block;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.7em;
+    letter-spacing: 0;
+    color: var(--fg);
+  }
+
 </style>
 </head>
 <body>
 <div id="terminal">
-  <div class="banner" id="banner">
+  <div class="banner banner-ascii" id="banner-ascii">
  ______  ______   ______   __    __   __   __   __   ______   __           
 /\__  _\/\  ___\ /\  == \ /\ "-./  \ /\ \ /\ "-.\ \ /\  __ \ /\ \          
 \/_/\ \/\ \  __\ \ \  __< \ \ \-./\ \\ \ \\ \ \-.  \\ \  __ \\ \ \____     
@@ -91,13 +156,22 @@
     Welcome to my terminal portfolio!
     Type 'help' to begin.
   </div>
+
+  <div class="banner banner-ocr" id="banner-ocr">
+    LYNX6SIX<br>TERMINAL<br>PORTFOLIO<br>
+    <span class="banner-subtext">Type <code>help</code> to begin.</span>
+  </div>
+
+
   <div><span class="prompt">&gt;</span> <input id="commandInput" autofocus autocomplete="off" spellcheck="false" /></div>
 </div>
 
 <script>
 const terminal = document.getElementById('terminal');
 const input = document.getElementById('commandInput');
-const bannerHTML = document.getElementById('banner').outerHTML;
+
+const bannerAsciiHTML = document.getElementById('banner-ascii').innerHTML;
+const bannerOcrHTML = document.getElementById('banner-ocr').innerHTML;
 
 const commands = {
   help: `Available commands:
@@ -108,7 +182,7 @@ const commands = {
   <i class="fa-solid fa-envelope fa-fw"></i> contact      - How to reach me
   <i class="fa-solid fa-broom fa-fw"></i> clear        - Clear the terminal`,
 
-  about: `I'm lynx6six — an IT professional passionate about automation, efficient systems, and technology that makes sense.
+  about: `I'm Lynx6six — an IT professional passionate about automation, efficient systems, and technology that makes sense.
 I enjoy building things that are both elegant and functional.`,
 
   skills: `Core skills:
@@ -144,7 +218,7 @@ I enjoy building things that are both elegant and functional.`,
   <i class="fa-solid fa-envelope fa-fw"></i> <a href="mailto:email@example.com">email@example.com</a>
   <i class="fa-solid fa-globe fa-fw"></i> <a href="https://yourdomain.com" target="_blank">yourdomain.com</a>
   <i class="fa-brands fa-linkedin fa-fw"></i> <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
-  <i class="fa-brands fa-github fa-fw"></i> <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>`,
+  <i class="fa-brands fa-github fa-fw"></i> <a href="https://github.com/lynx6six" target="_blank">github.com/lynx6six</a>`,
 
   clear: 'CLEAR'
 };
@@ -160,10 +234,17 @@ function printOutput(cmd, output) {
 
   if (output === 'CLEAR') {
     terminal.innerHTML = '';
-    const banner = document.createElement('div');
-    banner.className = 'banner';
-    banner.innerHTML = bannerHTML;
-    terminal.appendChild(banner);
+
+    const bannerAscii = document.createElement('div');
+    bannerAscii.className = 'banner banner-ascii';
+    bannerAscii.innerHTML = bannerAsciiHTML;
+
+    const bannerOcr = document.createElement('div');
+    bannerOcr.className = 'banner banner-ocr';
+    bannerOcr.innerHTML = bannerOcrHTML;
+
+    terminal.appendChild(bannerAscii);
+    terminal.appendChild(bannerOcr);
     terminal.appendChild(input.parentElement);
     return;
   }
@@ -235,5 +316,3 @@ input.addEventListener('keydown', e => {
 </script>
 </body>
 </html>
-
-
