@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lynx6six Terminal Portfolio</title>
+<title>Aarsh's Terminal Portfolio</title>
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
@@ -30,10 +30,12 @@
   }
 
   #terminal {
-    padding: 20px;
-    height: calc(100vh - 40px);
+    padding: 8px 10px;
+    height: calc(100vh - 20px);
     overflow-y: auto;
+    overflow-x: hidden;
     white-space: pre-wrap;
+    font-size: 0.85em;
   }
 
   .prompt {
@@ -66,12 +68,16 @@
   .banner {
     color: var(--accent);
     font-weight: bold;
-    margin-bottom: 1em;
+    margin-bottom: 0.2em;
   }
 
   .banner-ascii {
     white-space: pre;
     font-family: 'Roboto Mono', monospace;
+    font-size: 0.65em;
+    line-height: 0.95;
+    overflow: hidden;
+    margin-bottom: 0;
   }
 
   .banner-ocr {
@@ -101,9 +107,9 @@
     }
 
     #terminal {
-      transform: scale(0.9);
+      transform: scale(0.5);
       transform-origin: top left;
-      padding: 15px;
+      padding: 10px;
     }
 
     input {
@@ -123,6 +129,7 @@
   .typed-line {
     display: block;
     white-space: pre-wrap;
+    margin-bottom: 1.5em;
   }
 
   i {
@@ -132,7 +139,7 @@
   .banner-ocr .banner-subtext {
     display: inline-block;
     font-family: 'Roboto Mono', monospace;
-    font-size: 0.7em;
+    font-size: 1.0em;
     letter-spacing: 0;
     color: var(--fg);
   }
@@ -141,24 +148,30 @@
 </head>
 <body>
 <div id="terminal">
-  <div class="banner banner-ascii" id="banner-ascii">
- ______  ______   ______   __    __   __   __   __   ______   __           
-/\__  _\/\  ___\ /\  == \ /\ "-./  \ /\ \ /\ "-.\ \ /\  __ \ /\ \          
-\/_/\ \/\ \  __\ \ \  __< \ \ \-./\ \\ \ \\ \ \-.  \\ \  __ \\ \ \____     
-   \ \_\ \ \_____\\ \_\ \_\\ \_\ \ \_\\ \_\\ \_\\"\_\\ \_\ \_\\ \_____\    
-    \/_/  \/_____/ \/_/ /_/ \/_/  \/_/ \/_/ \/_/ \/_/ \/_/\/_/ \/_____/    
- ______  ______   ______  ______  ______  ______   __       __   ______    
-/\  == \/\  __ \ /\  == \/\__  _\/\  ___\/\  __ \ /\ \     /\ \ /\  __ \   
-\ \  _-/\ \ \/\ \\ \  __<\/_/\ \/\ \  __\\ \ \/\ \\ \ \____\ \ \\ \ \/\ \  
- \ \_\   \ \_____\\ \_\ \_\ \ \_\ \ \_\   \ \_____\\ \_____\\ \_\\ \_____\ 
-  \/_/    \/_____/ \/_/ /_/  \/_/  \/_/    \/_____/ \/_____/ \/_/ \/_____/ 
-                                                                           
-    Welcome to my terminal portfolio!
-    Type 'help' to begin.
-  </div>
+  <div class="banner banner-ascii" id="banner-ascii">8888888          d8b 888    d8b          888 d8b          d8b                  
+  888            Y8P 888    Y8P          888 Y8P          Y8P                  
+  888                888                 888                                   
+  888   88888b.  888 888888 888  8888b.  888 888 88888888 888 88888b.   .d88b. 
+  888   888 "88b 888 888    888     "88b 888 888    d88P  888 888 "88b d88P"88b
+  888   888  888 888 888    888 .d888888 888 888   d88P   888 888  888 888  888
+  888   888  888 888 Y88b.  888 888  888 888 888  d88P    888 888  888 Y88b 888
+8888888 888  888 888  "Y888 888 "Y888888 888 888 88888888 888 888  888  "Y88888
+                                                                            888
+                                                                       Y8b d88P
+                                                                        "Y88P" 
+       d8888                           888                                     
+      d88888                           888                                     
+     d88P888                           888                                     
+    d88P 888  8888b.  888d888 .d8888b  88888b.       .d88b.  888  888  .d88b.  
+   d88P  888     "88b 888P"   88K      888 "88b     d8P  Y8b `Y8bd8P' d8P  Y8b 
+  d88P   888 .d888888 888     "Y8888b. 888  888     88888888   X88K   88888888 
+ d8888888888 888  888 888          X88 888  888 d8b Y8b.     .d8""8b. Y8b.     
+d88P     888 "Y888888 888      88888P' 888  888 Y8P  "Y8888  888  888  "Y8888</div>
+  
+  <h2 style="margin:0 0 0.2em 0; font-size:1.05em;">Welcome to my Terminal Portfolio!</h2>
 
   <div class="banner banner-ocr" id="banner-ocr">
-    LYNX6SIX<br>TERMINAL<br>PORTFOLIO<br>
+    Aarsh's<br>TERMINAL<br>PORTFOLIO<br>
     <span class="banner-subtext">Type <code>help</code> to begin.</span>
   </div>
 
@@ -175,50 +188,67 @@ const bannerOcrHTML = document.getElementById('banner-ocr').innerHTML;
 
 const commands = {
   help: `Available commands:
-  <i class="fa-solid fa-user fa-fw"></i> about        - Who I am
-  <i class="fa-solid fa-lightbulb fa-fw"></i> skills       - My core skills
-  <i class="fa-solid fa-tools fa-fw"></i> technologies - Tools and platforms I use
-  <i class="fa-solid fa-folder-open fa-fw"></i> projects     - Some of my projects
-  <i class="fa-solid fa-envelope fa-fw"></i> contact      - How to reach me
-  <i class="fa-solid fa-broom fa-fw"></i> clear        - Clear the terminal`,
+  <i class="fa-solid fa-user fa-fw"></i> About        - About Me
+  <i class="fa-solid fa-lightbulb fa-fw"></i> Skills       - Skills
+  <i class="fa-solid fa-tools fa-fw"></i> Tools        - Tools and Technologies
+  <i class="fa-solid fa-certificate fa-fw"></i> Certification - Certification
+  <i class="fa-solid fa-graduation-cap fa-fw"></i> Education     - Education
+  <i class="fa-solid fa-folder-open fa-fw"></i> Projects     - Projects
+  <i class="fa-solid fa-envelope fa-fw"></i> Contact      - Contact Information
+  <i class="fa-solid fa-broom fa-fw"></i> Clear        - Clear the terminal`,
 
-  about: `I'm Lynx6six — an IT professional passionate about automation, efficient systems, and technology that makes sense.
-I enjoy building things that are both elegant and functional.`,
+  about: `I'm Aarsh Trivedi - Cybersecurity enthusiast focused on Cyber Threat Intelligence and OSINT. I enjoy analyzing cyber threats, researching adversary techniques, and building projects that strengthen my understanding of the evolving security landscape. This portfolio showcases my projects, research, and continuous learning journey in cybersecurity.`,
 
   skills: `Core skills:
-  <i class="fa-solid fa-infinity fa-fw"></i> CI/CD
-  <i class="fa-solid fa-gears fa-fw"></i> DevOps
+  <i class="fa-solid fa-network-wired fa-fw"></i> Networking
+  <i class="fa-solid fa-server fa-fw"></i> Virtualization
   <i class="fa-brands fa-linux fa-fw"></i> Linux
-  <i class="fa-brands fa-windows fa-fw"></i> Windows Server
-  <i class="fa-solid fa-desktop fa-fw"></i> Virtualization
-  <i class="fa-solid fa-hard-drive fa-fw"></i> Bare metal servers
-  <i class="fa-solid fa-network-wired fa-fw"></i> Basic networking
-  <i class="fa-solid fa-code fa-fw"></i> Basic scripting
-  <i class="fa-solid fa-people-roof fa-fw"></i> Agile`,
-
-  technologies: `Key technologies:
   <i class="fa-brands fa-docker fa-fw"></i> Docker
-  <i class="fa-brands fa-jenkins fa-fw"></i> Jenkins
-  <i class="fa-brands fa-git-alt fa-fw"></i> GitLab
-  <i class="fa-brands fa-bitbucket fa-fw"></i> Bitbucket
-  <i class="fa-brands fa-ubuntu fa-fw"></i> Ubuntu
-  <i class="fa-brands fa-windows fa-fw"></i> Windows Server
-  <i class="fa-solid fa-clone fa-fw"></i> VMware Virtualization
-  <i class="fa-solid fa-dharmachakra fa-fw"></i> Kubernetes
-  <i class="fa-solid fa-arrow-rotate-right fa-fw"></i> Bamboo`,
+  <i class="fa-brands fa-git-alt fa-fw"></i> Version Control [Git-Github]
+  <i class="fa-solid fa-database fa-fw"></i> Oracle SQL
+  <i class="fa-brands fa-python fa-fw"></i> Python
+  <i class="fa-solid fa-server fa-fw"></i> nginx
+  <i class="fa-solid fa-terminal fa-fw"></i> Basic Scripting`,
+
+  tools: `Tools:
+  <i class="fa-solid fa-network-wired fa-fw"></i> Cisco Packet Tracer
+  <i class="fa-solid fa-magnifying-glass fa-fw"></i> Wireshark
+  <i class="fa-solid fa-magnifying-glass fa-fw"></i> Nmap
+  <i class="fa-solid fa-bolt fa-fw"></i> OWASP ZAP
+  <i class="fa-solid fa-sitemap fa-fw"></i> MITRE ATT&CK
+  <i class="fa-solid fa-shield fa-fw"></i> Pfsense Firewall
+  <i class="fa-solid fa-terminal fa-fw"></i> Metasploit
+  <i class="fa-brands fa-jenkins fa-fw"></i> Jenkins`,
+
+  education: `Education:
+  <i class="fa-solid fa-graduation-cap fa-fw"></i> Rashtriya Raksha University -Bachelor of Technology in Computer Science Engineering with specialization in Cybersecurity
+  <i class="fa-solid fa-graduation-cap fa-fw"></i> Lok Jagruti Kendra University - Diploma Gold Medalist in Artificial Intelligence & Machine Learning `,
+
+
+  certification: `Certification:
+  <i class="fa-solid fa-certificate fa-fw"></i> SOCRadar - Mastering Threat Intelligence for SOC Analysts - <a href="https://credsverse.com/credentials/d89724ab-74e4-497c-8055-2d607f9c03f8?preview=1" target="_blank">SOCRadar - Mastering Threat Intelligence for SOC Analysts</a>
+  <i class="fa-solid fa-certificate fa-fw"></i> LetsDefend - SOC Analyst Learning Path - <a href="https://app.letsdefend.io/certificate/show/b60ea23c-4b0f-4b68-b5b0-4c74ec415e7b" target="_blank">LetsDefend - SOC Analyst Learning Path</a>
+  <i class="fa-solid fa-certificate fa-fw"></i> CCEP - <a href="https://courses.redteamleaders.com/exam-completion/80ac4f925ce6a3f7" target="_blank">RedTeamLeaders - Certified Cybersecurity Educator Professional (CCEP)</a>
+  <i class="fa-solid fa-certificate fa-fw"></i> Hackerrank - Python Basics - <a href="#" target="_blank">Hackerrank - Python Basics</a>`,
 
   projects: `Highlighted projects:
-  1. CI/CD and DevOps automation pipelines
-  2. Jenkins automation
-  3. Personal terminal portfolio site (this one!)
-  4. Tremolo guitar pedal with TL072 and JFET
-  5. Virtualization & server management projects`,
+  1. SecuriScan: Mobile Threat Detection & Security Analysis Platform
+
+  Built a mobile security tool that watches network traffic and Android app permissions in real time to catch phishing links, malicious IPs, and over privileged apps. Using Scapy and threat intelligence APIs, it inspects packets for suspicious activity, while ADB-based permission audits highlight risky apps. A Tkinter GUI presents clear alerts and live status so even non technical users can understand and act on security risks.
+
+  2. Threat-Pulse - Real-Time Cyber Threat Intelligence Dashboard
+
+  Designed a dashboard that pulls indicators from multiple open source threat feeds and turns them into a live view of active campaigns and risky IPs/domains. It highlights trends and high priority alerts so security teams can quickly see what matters, track threat actors, and prioritize incident response.
+
+  3. Home Lab - OS Hardening & Blue Team Practice
+
+  Maintained a small lab with Kali and Ubuntu Server VMs on VMware plus a Debian host into a segmented network, using it to practice Linux hardening and defensive monitoring. Hardened services (SSH, web, system daemons), tightened firewall rules, and regularly scanned the lab from Kali to find misconfigurations, then used logs and basic network captures to investigate and verify that fixes actually reduced the attack surface.`,
+
 
   contact: `You can reach me at:
-  <i class="fa-solid fa-envelope fa-fw"></i> <a href="mailto:email@example.com">email@example.com</a>
-  <i class="fa-solid fa-globe fa-fw"></i> <a href="https://yourdomain.com" target="_blank">yourdomain.com</a>
-  <i class="fa-brands fa-linkedin fa-fw"></i> <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
-  <i class="fa-brands fa-github fa-fw"></i> <a href="https://github.com/lynx6six" target="_blank">github.com/lynx6six</a>`,
+  <i class="fa-solid fa-envelope fa-fw"></i> <a href="mailto:trivediaarsh51@gmail.com">trivediaarsh51@gmail.com</a>
+  <i class="fa-brands fa-linkedin fa-fw"></i> <a href="https://linkedin.com/in/trivediaarsh" target="_blank">linkedin.com/in/trivediaarsh</a>
+  <i class="fa-brands fa-github fa-fw"></i> <a href="https://github.com/TrivediAarsh51" target="_blank">github.com/TrivediAarsh51</a>`,
 
   clear: 'CLEAR'
 };
@@ -230,6 +260,7 @@ let isTyping = false;
 function printOutput(cmd, output) {
   const newLine = document.createElement('div');
   newLine.innerHTML = `<span class="prompt">&gt;</span> ${cmd}`;
+  newLine.style.marginBottom = '0.05em';
   terminal.insertBefore(newLine, input.parentElement);
 
   if (output === 'CLEAR') {
@@ -312,6 +343,13 @@ input.addEventListener('keydown', e => {
     else if (matches.length > 1)
       printOutput(current, `Possible commands:\n  ${matches.join('\n  ')}`);
   }
+});
+
+// Auto-run help command on page load
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    printOutput('help', commands['help']);
+  }, 300);
 });
 </script>
 </body>
