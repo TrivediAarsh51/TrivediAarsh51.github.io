@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Aarsh Trivedi, cybersecurity student: network forensics, threat detection and digital forensics.">
+<meta name="color-scheme" content="dark">
+<title>Aarsh Trivedi | Cybersecurity Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#05070d;--pn:rgba(14,18,30,.9);--ln:#1f2840;--tx:#eef1f8;--mu:#a9b4cb;--ac:#ff6b6b;--ic:#9ad7ff;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);overflow-x:clip}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:rgba(5,7,13,.92)}
+h1,h2,h3{font-family:inherit;margin:0;line-height:1.12}
+a{color:var(--ic);text-decoration:none}a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px;border-radius:6px}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+#pg{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:100%;background:var(--ac);transform:scaleX(0);transform-origin:0 50%;z-index:50}
+nav,main,footer{position:relative;z-index:1}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:30;background:rgba(5,7,13,.8);border-bottom:1px solid var(--ln)}
+.nb{max-width:1120px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.lg{font:700 1.15rem Inter,sans-serif;color:var(--tx)}
+.nl{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.nl a{color:var(--mu);font-weight:500;font-size:.93rem}.nl a:hover{color:var(--tx);text-decoration:none}
+#mb{display:none;background:none;border:1px solid var(--ln);color:var(--tx);border-radius:8px;padding:8px 14px;font:inherit}
+.w{max-width:1120px;margin:auto;padding:0 20px}
+section{padding:100px 0 30px}
+h2{font-size:clamp(1.8rem,5vw,3rem);font-weight:800;margin-bottom:12px}
+.sub{color:var(--mu);max-width:58ch;margin:0 0 34px}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:110px 0 70px;perspective:1000px}
+.hi{transform-style:preserve-3d}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,7,13,.92) 0,rgba(5,7,13,.65) 50%,rgba(5,7,13,.1) 100%);pointer-events:none}
+.hero .w{position:relative;z-index:1}
+.hero h1,.rl,.ld{text-shadow:0 2px 18px rgba(5,7,13,.95)}
+h1{font-size:clamp(2.6rem,10vw,7.2rem);font-weight:800;letter-spacing:-.03em}
+h1 em{font-style:normal;color:var(--ac)}
+.rl{font-size:clamp(1.05rem,2.4vw,1.45rem);color:#cfd7e8;margin:20px 0 8px;font-weight:500}
+.ld{max-width:56ch;color:#dbe2f1;font-size:1.08rem;margin:0 0 30px}
+.bt{display:flex;flex-wrap:wrap;gap:12px}
+.b{display:inline-block;padding:13px 24px;border-radius:10px;font-weight:600;border:1px solid var(--ln);color:var(--tx);background:var(--pn)}
+.b.p{background:var(--ac);color:#12060a;border-color:var(--ac)}
+.b:hover{text-decoration:none;border-color:var(--ac)}
+.g{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));perspective:1200px}
+.c{background:var(--pn);border:1px solid var(--ln);border-radius:14px;padding:24px;transform-style:preserve-3d}
+.c h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+.c p{margin:8px 0 0;color:#dbe2f1;font-size:1rem}
+.c .m{color:var(--mu);font-size:.88rem;margin:0}
+.t{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.t i{font-style:normal;font-size:.82rem;padding:5px 12px;border-radius:99px;border:1px solid var(--ln);color:#d7deee}
+.k{margin:10px 0 0;padding-left:18px;color:#c4cde0;font-size:.96rem}.k li{margin:4px 0}
+/* skills: grid by default, 3D carousel when JS adds .on */
+.cyw{perspective:1500px}
+.cy{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.cy.on{display:block;position:relative;width:min(90vw,520px);height:390px;margin:0 auto;transform-style:preserve-3d}
+.cy.on .fc{position:absolute;inset:0;padding:28px;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-color:var(--ac);background:#0b0f1c}
+.cy.on .fc h3{font-size:1.4rem;margin-bottom:6px}
+.cy.on .t i{font-size:.95rem;padding:7px 14px;color:#fff;border-color:#3a4767;background:rgba(255,255,255,.05)}
+#skills.on .sub{margin-bottom:22px}
+#skills.on{min-height:100svh;display:flex;align-items:center;padding:90px 0 20px}
+.hint{color:var(--mu);font-size:.85rem;text-align:center;margin-top:26px}
+/* experience: sticky deck */
+.xs{position:relative}
+.xp{position:sticky;top:calc(92px + var(--i)*18px);margin-bottom:46px;transform-origin:50% 0}
+/* projects: native swipe row by default, pinned gallery when JS adds .on */
+.tk{display:grid;gap:26px;max-width:1120px;margin:0 auto;padding:0 20px 20px;perspective:1400px}
+.pj{border-top:3px solid var(--ac);padding:28px}
+.rg{display:flex;align-items:center;gap:18px}
+.rs{width:92px;height:92px;flex:none;transform:rotate(-90deg)}
+.rs circle{fill:none;stroke-width:8;stroke-linecap:round}
+.rs .tr{stroke:var(--ln)}.rs .fl{stroke:var(--ac);stroke-dasharray:264;stroke-dashoffset:264}
+.nm{font:700 1.8rem Inter,sans-serif;line-height:1}.nm small{display:block;font:500 .88rem Inter,sans-serif;color:var(--mu);margin-top:6px}
+/* certificate wall */
+.wall{max-width:1120px;margin:0 auto;padding:10px 20px}
+.plane{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:18px}
+.row{display:contents}
+.ct{position:relative;overflow:hidden;background:var(--pn);border:1px solid var(--ln);border-radius:14px;padding:22px;transition:border-color .3s}
+.ct::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.16) 50%,transparent 65%);transform:translateX(-120%);pointer-events:none}
+.ct.st::after{transform:translateX(120%);transition:transform 1s ease}
+.ct:hover{border-color:var(--ac)}
+.t i.gold{border-color:#fcd34d;color:#fcd34d}
+.ct b{display:block;font:700 1.1rem Inter,sans-serif;margin-bottom:6px}
+.ct span{display:block;color:#c4cde0;font-size:.9rem}.ct small{display:block;color:var(--mu);margin-top:10px;font-size:.82rem}
+footer{padding:50px 20px 80px;text-align:center;color:var(--mu)}
+.nj #bg{display:none}
+@media (max-width:760px){
+#mb{display:block}
+.nl{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(5,7,13,.97);border-bottom:1px solid var(--ln)}
+.nl.o{display:flex}.nl a{display:block;padding:14px 20px}
+section{padding:76px 0 24px}
+.cy.on{height:440px}.hero::before{background:rgba(5,7,13,.72)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ct{transition:none}}
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas><div id="pg"></div>
+<nav aria-label="Main"><div class="nb"><a class="lg" href="#top">AT</a>
+<button id="mb" aria-expanded="false" aria-controls="nl">Menu</button>
+<ul class="nl" id="nl"><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#projects">Projects</a></li><li><a href="#achievements">Achievements</a></li><li><a href="#certs">Certifications</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+<main id="top">
+<header class="hero" data-c="#ff6b6b"><div class="w"><div class="hi">
+<h1 aria-label="Aarsh Trivedi"><span class="dc">Aarsh</span><br><em class="dc">Trivedi</em></h1>
+<p class="rl">Cybersecurity student: network forensics, threat detection and DFIR.</p>
+<p class="ld">I build tools that read packets, score threats and keep evidence defensible. B.Tech Cyber Security at Rashtriya Raksha University, class of 2027.</p>
+<div class="bt"><a class="b p" href="#projects">See my projects</a><a class="b" href="#contact">Get in touch</a></div>
+</div></div></header>
+
+<section id="skills" data-c="#9ad7ff"><div class="w"><h2 class="dc">Skills</h2><p class="sub">Defensive security first, with the engineering to build my own tooling.</p>
+<div class="cyw"><div class="cy">
+<div class="c fc"><h3>Security and forensics</h3><div class="t"><i>Network forensics</i><i>PCAP analysis</i><i>Threat detection</i><i>Digital forensics</i><i>Log analysis</i><i>Threat intelligence</i><i>OSINT</i><i>Zero Trust</i></div></div>
+<div class="c fc"><h3>Security tools</h3><div class="t"><i>Wireshark</i><i>Nmap</i><i>Suricata</i><i>Scapy</i><i>pfSense</i><i>OWASP ZAP</i><i>Metasploit</i><i>Kali Linux</i></div></div>
+<div class="c fc"><h3>Systems and networking</h3><div class="t"><i>Linux hardening</i><i>SSH hardening</i><i>Firewalls</i><i>Cisco Packet Tracer</i><i>CCNA</i></div></div>
+<div class="c fc"><h3>Development</h3><div class="t"><i>Python</i><i>Bash</i><i>FastAPI</i><i>React</i><i>TypeScript</i><i>PostgreSQL</i><i>SQLAlchemy</i><i>Docker</i><i>Git</i></div></div>
+</div></div><p class="hint" id="h1">Scroll to flip through the skill set.</p></div></section>
+
+<section id="experience" data-c="#c4b5fd"><div class="w"><h2 class="dc">Experience</h2><p class="sub">Research, mentoring and volunteering, stacking up as you scroll.</p>
+<div class="xs">
+<div class="c xp" style="--i:0"><h3>AI Security Research Intern, Photon Security</h3><p class="m">Aug 2026 – Sep 2026</p>
+<ul class="k"><li>Contributed to a Graph-based RAG forensics system for semantic evidence retrieval across English, Hindi and Gujarati documents.</li><li>Worked on document processing, evidence extraction, retrieval and query pipelines.</li><li>Researched OCR-based image evidence and forensic data analysis.</li></ul></div>
+<div class="c xp" style="--i:1"><h3>Student mentor</h3><p class="m">With letters of recommendation and appreciation</p><ul class="k"><li>Guided mentees in teamwork, communication and technical skills.</li></ul></div>
+<div class="c xp" style="--i:2"><h3>Event volunteer, Smart India Hackathon (college chapter)</h3><p class="m">2025</p><p>Event coordination and communication with judges and stakeholders.</p></div>
+</div></div></section>
+
+<section id="education" data-c="#f9a8d4"><div class="w"><h2 class="dc">Education</h2><p class="sub">Where I built the foundations.</p>
+<div class="g">
+<article class="c"><h3>B.Tech in Computer Science and Engineering (Cyber Security)</h3><p class="m">Rashtriya Raksha University, Gandhinagar, Gujarat</p><p>Class of 2027</p><div class="t"><i>CGPA 8.17 / 10</i></div></article>
+<article class="c"><h3>Diploma in Artificial Intelligence and Machine Learning</h3><p class="m">Lok Jagruti Kendra University, Ahmedabad, Gujarat</p><p>Class of 2024</p><div class="t"><i class="gold">Gold Medalist</i><i>8.73 / 10</i></div></article>
+</div></div></section>
+
+<section id="projects" data-c="#ff6b6b"><div class="w"><h2 class="dc">Projects</h2><p class="sub">Three builds that show how I think about detection, trust and hardening. <a href="https://github.com/TrivediAarsh51">All repositories on GitHub</a></p></div>
+<div class="tk">
+<div class="c pj"><h3>PacketIntel</h3><p class="m">PCAP analysis and automated threat detection platform</p><p>Network forensics with live capture, traffic-flow monitoring, 18 detection engines, ML anomaly detection, chain of custody and signed reports.</p><div class="t"><i>Python</i><i>FastAPI</i><i>Scapy</i><i>PostgreSQL</i><i>React</i><i>Docker</i></div></div>
+<div class="c pj"><h3>ACHYUTA</h3><p class="m">Adaptive Continuous Hardening for Your Unified Trust Architecture</p><p>A Zero Trust model for Windows endpoints with risk scoring, policy lifecycle, trust-state modeling and append-only audit lineage.</p><div class="t"><i>Zero Trust</i><i>Risk scoring</i><i>Windows</i></div></div>
+<div class="c pj"><h3>Home lab</h3><p class="m">OS hardening and blue team practice</p><p>Kali and Ubuntu VMs for Linux and SSH hardening, firewall rules, Nmap scans, Wireshark analysis and log-based investigation.</p><div class="t"><i>Kali</i><i>Ubuntu</i><i>Wireshark</i><i>Nmap</i></div></div>
+</div></section>
+
+<section id="achievements" data-c="#fcd34d"><div class="w"><h2 class="dc">Achievements</h2><p class="sub">Public results from CTFs and training platforms.</p>
+<div class="g">
+<div class="c"><div class="rg"><svg class="rs" viewBox="0 0 100 100" aria-hidden="true"><circle class="tr" cx="50" cy="50" r="42"/><circle class="fl" data-p="95" cx="50" cy="50" r="42"/></svg><div class="nm"><span class="dc">Top 5%</span><small>TryHackMe, 116 rooms, 16 badges</small></div></div><p><a href="https://tryhackme.com/p/Snowysherlock">View profile</a></p></div>
+<div class="c"><div class="rg"><svg class="rs" viewBox="0 0 100 100" aria-hidden="true"><circle class="tr" cx="50" cy="50" r="42"/><circle class="fl" data-p="87" cx="50" cy="50" r="42"/></svg><div class="nm"><span class="dc">87%</span><small>LetsDefend success, 3399 points</small></div></div><p><a href="https://app.letsdefend.io/user/trivediaarsh">View profile</a></p></div>
+<div class="c"><div class="nm"><span class="dc">802 / 6951</span><small>Huntress CTF, team ranking</small></div></div>
+<div class="c"><h3>OSINT CTFs</h3><p>Hacktoria: Naval Intrusion, Mirage at Sea and Saving Isabela. Active on OSINT UK CTF.</p><p><a href="https://ctf.osint.uk/users/1370">OSINT UK profile</a></p></div>
+<div class="c"><h3>Programmes and events</h3><p>Indo-Dutch Cyber Security School 2024 (30 CPE credits), MeitY proactive cybersecurity programme (May 2026), AKATI symposium 2024.</p></div>
+<div class="c"><h3>Hackathons</h3><p>Ingenious Hackathon 5.0 at Ahmedabad University and CodeArena 2.0 at RRU.</p></div>
+</div></div></section>
+
+<section id="certs" data-c="#86efac"><div class="w"><h2 class="dc">Certifications</h2><p class="sub">Each credential gets stamped onto the wall as you scroll. Verified badges are on <a href="https://www.credly.com/users/trivedi-aarsh/badges#credly">Credly</a>.</p></div>
+<div class="wall"><div class="plane">
+<div class="row">
+<div class="ct"><b>CRTOM</b><span>Certified Red Team Operations Management</span><small>Red Team Leaders, Dec 30, 2025</small></div>
+<div class="ct"><b>CPPS</b><span>Certified Phishing Prevention Specialist</span><small>Hack &amp; Fix</small></div>
+<div class="ct"><b>CCNA</b><span>Introduction to Networks; Switching, Routing and Wireless; Enterprise Networking, Security and Automation</span><small>Cisco</small></div>
+<div class="ct"><b>Threat Intelligence</b><span>For SOC analysts</span><small>SOCRadar</small></div>
+</div>
+<div class="row">
+<div class="ct"><b>SOC Analyst Path</b><span>Learning path</span><small>LetsDefend</small></div>
+<div class="ct"><b>OpenCV Bootcamp</b><span>Certificate of excellence, grade 100%</span><small>OpenCV University</small></div>
+<div class="ct"><b>Image Processing</b><span>With MATLAB, 100% complete</span><small>MathWorks, Aug 29, 2025</small></div>
+<div class="ct"><b>Power BI</b><span>Introduction, certificate of achievement</span><small>DataFlair, Sep – Oct 2025</small></div>
+</div></div></div></section>
+
+<section id="contact" data-c="#ff6b6b"><div class="w"><h2 class="dc">Let’s build something secure</h2><p class="sub">Open to internships and entry-level roles in SOC, DFIR and security engineering.</p>
+<div class="bt"><a class="b p" href="https://www.linkedin.com/in/trivediaarsh/">LinkedIn</a><a class="b" href="https://github.com/TrivediAarsh51">GitHub</a><a class="b" href="https://medium.com/@trivediaarsh51">Medium</a><a class="b" href="https://tryhackme.com/p/Snowysherlock">TryHackMe</a></div>
+<p class="sub" style="margin-top:22px">Email: [add your email here]</p></div></section>
+</main>
+<footer>© 2026 Aarsh Trivedi. Ahmedabad, India.</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script>
+(function(){
+var mob=matchMedia("(max-width:760px)").matches,rm=matchMedia("(prefers-reduced-motion: reduce)").matches,root=document.documentElement,tgt="#ff6b6b",$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var mb=document.getElementById("mb"),nl=document.getElementById("nl"),pg=document.getElementById("pg");
+mb.onclick=function(){var o=nl.classList.toggle("o");mb.setAttribute("aria-expanded",o)};
+nl.onclick=function(e){if(e.target.tagName==="A"){nl.classList.remove("o");mb.setAttribute("aria-expanded","false")}};
+function prog(){var d=root.scrollHeight-innerHeight;return d>0?Math.min(1,scrollY/d):0}
+addEventListener("scroll",function(){pg.style.transform="scaleX("+prog()+")"},{passive:true});
+
+/* 3D scene: a gyroscope of rings that the camera orbits as you scroll */
+try{
+if(!window.THREE)throw 0;
+var r=new THREE.WebGLRenderer({canvas:document.getElementById("bg"),antialias:!mob,alpha:true});
+r.setPixelRatio(Math.min(devicePixelRatio,mob?1.5:2));
+var sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(55,1,.1,100),G=new THREE.Group(),mats=[],i,k;sc.add(G);
+var core=new THREE.Mesh(new THREE.IcosahedronGeometry(1.7,1),new THREE.MeshBasicMaterial({wireframe:true,transparent:true,opacity:.55}));mats.push(core.material);G.add(core);
+var cp=[];for(k=0;k<72;k++){var a=k/72*6.2832;cp.push(new THREE.Vector3(Math.cos(a),Math.sin(a),0))}
+var rings=[3.2,4.4,5.6].map(function(s,j){var m=new THREE.LineBasicMaterial({transparent:true,opacity:.7-j*.12}),l=new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(cp),m);l.scale.set(s,s,1);l.rotation.set(j*1.05,j*.7,0);mats.push(m);G.add(l);return l});
+var n=mob?260:620,pa=new Float32Array(n*3);
+for(i=0;i<n;i++){var u=Math.random()*2-1,t=Math.random()*6.2832,s=Math.sqrt(1-u*u),R=8+Math.random()*7;pa[i*3]=R*s*Math.cos(t);pa[i*3+1]=R*u;pa[i*3+2]=R*s*Math.sin(t)}
+var pgm=new THREE.BufferGeometry();pgm.setAttribute("position",new THREE.BufferAttribute(pa,3));
+sc.add(new THREE.Points(pgm,new THREE.PointsMaterial({color:0xcfd7e8,size:mob?.07:.06,transparent:true,opacity:.65})));
+var col=new THREE.Color(0xff6b6b),tc=new THREE.Color(),sp=0,mx=0,my=0,tm=0;
+function size(){var w=innerWidth,h=innerHeight;r.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();draw()}
+function draw(){var p=rm?prog():sp,a=p*6.2832,w=innerWidth,h=innerHeight;cam.setViewOffset(w,h,w>900?-w*.2*Math.max(0,1-p*10):0,0,w,h);tc.set(tgt);col.lerp(tc,.06);mats.forEach(function(m){m.color.copy(col)});
+rings.forEach(function(l,j){l.rotation.x=j*1.05+tm*.25*(j+1)*.5+p*2;l.rotation.y=j*.7+tm*.18})
+core.rotation.y=tm*.3;core.rotation.x=p*3;
+cam.position.set(Math.sin(a)*12+mx*1.4,Math.sin(p*9.4)*3-my*1.2,Math.cos(a)*12);cam.lookAt(0,0,0);r.render(sc,cam)}
+function loop(){tm+=.016;sp+=(prog()-sp)*.06;draw();requestAnimationFrame(loop)}
+addEventListener("resize",size);
+addEventListener("pointermove",function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+if(rm){addEventListener("scroll",draw,{passive:true});size()}else{size();loop()}
+}catch(e){document.body.classList.add("nj")}
+
+if(!window.gsap||!window.ScrollTrigger||rm)return;
+gsap.registerPlugin(ScrollTrigger);
+var ST=function(t,s,o){return Object.assign({trigger:t,start:s||"top 88%"},o||{})};
+
+/* Decrypt effect: headings and numbers resolve from random characters */
+var CH="01#$%<>/{}ABCDEF";
+function dec(el,d){if(el._d)return;el._d=1;var t=el.textContent,o={p:0};
+gsap.to(o,{p:1,duration:d||1,ease:"none",onUpdate:function(){var q=Math.floor(o.p*t.length),s="",x;for(x=0;x<t.length;x++)s+=(x<q||t[x]===" ")?t[x]:CH[Math.floor(Math.random()*CH.length)];el.textContent=s},onComplete:function(){el.textContent=t}})}
+$(".dc").forEach(function(el){if(el.closest(".hero"))dec(el,1.3);else ScrollTrigger.create({trigger:el,start:"top 92%",once:true,onEnter:function(){dec(el,.9)}})});
+
+/* Section colour: the 3D scene and accents shift as you move through the page */
+$("[data-c]").forEach(function(el){ScrollTrigger.create({trigger:el,start:"top 55%",end:"bottom 55%",onToggle:function(s){if(s.isActive){tgt=el.dataset.c;root.style.setProperty("--ac",tgt)}}})});
+
+/* Hero leaves by swinging away to the left */
+gsap.from(".rl,.ld,.hero .b",{y:30,opacity:0,stagger:.12,delay:.8,duration:.8});
+gsap.to(".hi",{rotationY:-38,x:-140,z:-200,opacity:0,transformOrigin:"0 50%",ease:"none",scrollTrigger:ST(".hero","top top",{end:"bottom top",scrub:true})});
+
+/* Skills: a pinned deck whose cards flip away like calendar pages */
+var cy=$(".cy")[0],fs=$(".fc",cy),N=fs.length;
+cy.classList.add("on");$("#skills")[0].classList.add("on");
+fs.forEach(function(f,j){gsap.set(f,{zIndex:N-j,transformOrigin:"50% 0",transformPerspective:1400,y:j*16,scale:1-j*.04});if(j)gsap.set(f.children,{opacity:0})});
+var tl=gsap.timeline({defaults:{ease:"power2.inOut"},scrollTrigger:ST("#skills","top top",{end:"+=220%",pin:true,scrub:.7})});
+fs.forEach(function(f,j){if(j===N-1)return;tl.to(f,{rotationX:105,y:-30,opacity:0,duration:1},j);
+for(var q=j+1;q<N;q++){tl.to(fs[q],{y:(q-j-1)*16,scale:1-(q-j-1)*.04,duration:1},j);if(q===j+1)tl.to(fs[q].children,{opacity:1,duration:.6},j+.35)}});
+gsap.to("#h1",{opacity:0,scrollTrigger:ST("#skills","top -10%",{end:"top -30%",scrub:true})});
+
+/* Experience: cards stack like a deck, earlier ones tilt back */
+var xp=$(".xp");
+xp.forEach(function(c,j){
+gsap.from(c,{y:70,opacity:0,duration:.8,ease:"power3.out",scrollTrigger:ST(c,"top 92%")});
+if(xp[j+1])gsap.to(c,{scale:.93,rotationX:6,transformPerspective:1100,ease:"none",scrollTrigger:{trigger:xp[j+1],start:"top 78%",end:"top "+(110+j*18)+"px",scrub:true}})});
+
+/* Projects: each project stands up from the floor like a hinged panel, then its tags pop out */
+$(".pj").forEach(function(c){
+gsap.fromTo(c,{rotationX:75,y:90,opacity:0,transformOrigin:"50% 100%",transformPerspective:1400},{rotationX:0,y:0,opacity:1,ease:"none",scrollTrigger:ST(c,"top 96%",{end:"top 52%",scrub:.6})});
+gsap.from($("i",c),{scale:0,z:-200,opacity:0,stagger:.07,duration:.6,ease:"back.out(2)",scrollTrigger:ST(c,"top 60%")})});
+
+/* Achievements: cards fly in from alternating sides, rings sweep */
+$("#achievements .c").forEach(function(c,j){var s=j%2?1:-1;gsap.from(c,{x:s*130,rotationY:-s*42,z:-260,opacity:0,transformPerspective:1000,duration:1.1,ease:"power3.out",scrollTrigger:ST(c,"top 92%")})});
+$(".fl").forEach(function(c){gsap.to(c,{strokeDashoffset:264*(1-c.dataset.p/100),duration:1.8,ease:"power3.out",scrollTrigger:ST(c,"top 90%",{once:true})})});
+
+/* Education: each card opens like a book cover, and the medal pops */
+$("#education .c").forEach(function(c,j){gsap.from(c,{rotationY:-95,transformOrigin:"0 50%",transformPerspective:1200,opacity:0,duration:1.2,delay:j*.15,ease:"power3.out",scrollTrigger:ST(c,"top 88%")})});
+gsap.from(".gold",{scale:0,rotation:-40,duration:.8,ease:"back.out(3)",scrollTrigger:ST(".gold","top 90%")});
+
+/* Certifications: each credential is stamped onto the wall, then a light sweeps across it */
+gsap.set(".ct",{opacity:0});
+ScrollTrigger.batch(".ct",{start:"top 92%",once:true,onEnter:function(b){gsap.fromTo(b,{scale:1.8,rotation:function(){return gsap.utils.random(-16,16)},z:220,opacity:0,transformPerspective:900},{scale:1,rotation:0,z:0,opacity:1,duration:.55,ease:"back.out(1.7)",stagger:.12,onComplete:function(){b.forEach(function(e,x){setTimeout(function(){e.classList.add("st")},x*90)})}})}});
+
+/* Contact */
+gsap.from("#contact .b",{y:40,scale:.8,opacity:0,stagger:.1,duration:.7,ease:"back.out(2)",scrollTrigger:ST("#contact","top 70%")});
+})();
+</script>
+</body>
+</html>
