@@ -23,8 +23,9 @@ nav,main,footer{position:relative;z-index:1}
 nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:30;background:rgba(5,7,13,.8);border-bottom:1px solid var(--ln)}
 .nb{max-width:1120px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
 .lg{font:700 1.15rem Inter,sans-serif;color:var(--tx)}
-.nl{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.nl{display:flex;gap:16px;list-style:none;margin:0;padding:0}
 .nl a{color:var(--mu);font-weight:500;font-size:.93rem}.nl a:hover{color:var(--tx);text-decoration:none}
+.nl a.dl{color:var(--ac);border:1px solid var(--ac);border-radius:8px;padding:6px 14px}
 #mb{display:none;background:none;border:1px solid var(--ln);color:var(--tx);border-radius:8px;padding:8px 14px;font:inherit}
 .w{max-width:1120px;margin:auto;padding:0 20px}
 section{padding:100px 0 30px}
@@ -88,7 +89,7 @@ footer{padding:50px 20px 80px;text-align:center;color:var(--mu)}
 @media (max-width:760px){
 #mb{display:block}
 .nl{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(5,7,13,.97);border-bottom:1px solid var(--ln)}
-.nl.o{display:flex}.nl a{display:block;padding:14px 20px}
+.nl.o{display:flex}.nl a{display:block;padding:14px 20px}.nl a.dl{padding:14px 20px;border:0;border-radius:0}
 section{padding:76px 0 24px}
 .cy.on{height:440px}.hero::before{background:rgba(5,7,13,.72)}
 }
@@ -99,13 +100,13 @@ section{padding:76px 0 24px}
 <canvas id="bg" aria-hidden="true"></canvas><div id="pg"></div>
 <nav aria-label="Main"><div class="nb"><a class="lg" href="#top">AT</a>
 <button id="mb" aria-expanded="false" aria-controls="nl">Menu</button>
-<ul class="nl" id="nl"><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#projects">Projects</a></li><li><a href="#achievements">Achievements</a></li><li><a href="#certs">Certifications</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+<ul class="nl" id="nl"><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#volunteering">Volunteering</a></li><li><a href="#projects">Projects</a></li><li><a href="#achievements">Achievements</a></li><li><a href="#certs">Certifications</a></li><li><a href="#contact">Contact</a></li><li><a class="dl" href="Aarsh_Trivedi_Resume.pdf" download>Resume</a></li></ul></div></nav>
 <main id="top">
 <header class="hero" data-c="#ff6b6b"><div class="w"><div class="hi">
 <h1 aria-label="Aarsh Trivedi"><span class="dc">Aarsh</span><br><em class="dc">Trivedi</em></h1>
 <p class="rl">Cybersecurity student: network forensics, threat detection and DFIR.</p>
 <p class="ld">I build tools that read packets, score threats and keep evidence defensible. B.Tech Cyber Security at Rashtriya Raksha University, class of 2027.</p>
-<div class="bt"><a class="b p" href="#projects">See my projects</a><a class="b" href="#contact">Get in touch</a></div>
+<div class="bt"><a class="b p" href="#projects">See my projects</a><a class="b" href="Aarsh_Trivedi_Resume.pdf" download>Download resume</a><a class="b" href="#contact">Get in touch</a></div>
 </div></div></header>
 
 <section id="skills" data-c="#9ad7ff"><div class="w"><h2 class="dc">Skills</h2><p class="sub">Defensive security first, with the engineering to build my own tooling.</p>
@@ -116,18 +117,26 @@ section{padding:76px 0 24px}
 <div class="c fc"><h3>Development</h3><div class="t"><i>Python</i><i>Bash</i><i>FastAPI</i><i>React</i><i>TypeScript</i><i>PostgreSQL</i><i>SQLAlchemy</i><i>Docker</i><i>Git</i></div></div>
 </div></div><p class="hint" id="h1">Scroll to flip through the skill set.</p></div></section>
 
-<section id="experience" data-c="#c4b5fd"><div class="w"><h2 class="dc">Experience</h2><p class="sub">Research, mentoring and volunteering, stacking up as you scroll.</p>
+<section id="experience" data-c="#c4b5fd"><div class="w"><h2 class="dc">Experience</h2><p class="sub">Research and mentoring, stacking up as you scroll.</p>
 <div class="xs">
 <div class="c xp" style="--i:0"><h3>AI Security Research Intern, Photon Security</h3><p class="m">Aug 2026 – Sep 2026</p>
 <ul class="k"><li>Contributed to a Graph-based RAG forensics system for semantic evidence retrieval across English, Hindi and Gujarati documents.</li><li>Worked on document processing, evidence extraction, retrieval and query pipelines.</li><li>Researched OCR-based image evidence and forensic data analysis.</li></ul></div>
 <div class="c xp" style="--i:1"><h3>Student mentor</h3><p class="m">With letters of recommendation and appreciation</p><ul class="k"><li>Guided mentees in teamwork, communication and technical skills.</li></ul></div>
-<div class="c xp" style="--i:2"><h3>Event volunteer, Smart India Hackathon (college chapter)</h3><p class="m">2025</p><p>Event coordination and communication with judges and stakeholders.</p></div>
 </div></div></section>
 
 <section id="education" data-c="#f9a8d4"><div class="w"><h2 class="dc">Education</h2><p class="sub">Where I built the foundations.</p>
 <div class="g">
 <article class="c"><h3>B.Tech in Computer Science and Engineering (Cyber Security)</h3><p class="m">Rashtriya Raksha University, Gandhinagar, Gujarat</p><p>Class of 2027</p><div class="t"><i>CGPA 8.17 / 10</i></div></article>
 <article class="c"><h3>Diploma in Artificial Intelligence and Machine Learning</h3><p class="m">Lok Jagruti Kendra University, Ahmedabad, Gujarat</p><p>Class of 2024</p><div class="t"><i class="gold">Gold Medalist</i><i>8.73 / 10</i></div></article>
+</div></div></section>
+
+<section id="volunteering" data-c="#fb923c"><div class="w"><h2 class="dc">Volunteering</h2><p class="sub">Hosting, organizing and supporting events and training programmes.</p>
+<div class="g">
+<article class="c" style="grid-column:1/-1"><h3>CTF Host and Challenge Organizer (OSINT)</h3><p class="m">Rashtriya Raksha University | Jul 2026 – Sep 2026 (3 months) | Education</p>
+<p>Hosted an OSINT-domain Capture the Flag for the National OSINT Commandos training programme, a roughly three-month national training initiative.</p>
+<ul class="k"><li>Handled challenge design, flag validation, scoring and live participant support throughout the event.</li><li>Coordinated with the programme’s organizers on scheduling, rules and communication.</li><li>Helped trainees apply real investigation techniques such as geolocation, social media and reverse image search, and public records in a competitive format.</li></ul>
+<div class="t"><i>OSINT</i><i>CTF Design</i><i>Event Management</i><i>Public Speaking</i><i>Mentoring</i></div></article>
+<article class="c"><h3>Event Volunteer, Smart India Hackathon (college chapter)</h3><p class="m">2025</p><p>Event coordination and communication with judges and stakeholders.</p></article>
 </div></div></section>
 
 <section id="projects" data-c="#ff6b6b"><div class="w"><h2 class="dc">Projects</h2><p class="sub">Three builds that show how I think about detection, trust and hardening. <a href="https://github.com/TrivediAarsh51">All repositories on GitHub</a></p></div>
@@ -142,7 +151,7 @@ section{padding:76px 0 24px}
 <div class="c"><div class="rg"><svg class="rs" viewBox="0 0 100 100" aria-hidden="true"><circle class="tr" cx="50" cy="50" r="42"/><circle class="fl" data-p="95" cx="50" cy="50" r="42"/></svg><div class="nm"><span class="dc">Top 5%</span><small>TryHackMe, 116 rooms, 16 badges</small></div></div><p><a href="https://tryhackme.com/p/Snowysherlock">View profile</a></p></div>
 <div class="c"><div class="rg"><svg class="rs" viewBox="0 0 100 100" aria-hidden="true"><circle class="tr" cx="50" cy="50" r="42"/><circle class="fl" data-p="87" cx="50" cy="50" r="42"/></svg><div class="nm"><span class="dc">87%</span><small>LetsDefend success, 3399 points</small></div></div><p><a href="https://app.letsdefend.io/user/trivediaarsh">View profile</a></p></div>
 <div class="c"><div class="nm"><span class="dc">802 / 6951</span><small>Huntress CTF, team ranking</small></div></div>
-<div class="c"><h3>OSINT CTFs</h3><p>Hacktoria: Naval Intrusion, Mirage at Sea and Saving Isabela. Active on OSINT UK CTF.</p><p><a href="https://ctf.osint.uk/users/1370">OSINT UK profile</a></p></div>
+<div class="c"><h3>OSINT CTFs</h3><p>Hacktoria: Naval Intrusion, Mirage at Sea and Saving Isabela. Also hosted an OSINT CTF for the National OSINT-Cyber Commandos training programme, which ran about 3 months.</p></div>
 <div class="c"><h3>Programmes and events</h3><p>Indo-Dutch Cyber Security School 2024 (30 CPE credits), MeitY proactive cybersecurity programme (May 2026), AKATI symposium 2024.</p></div>
 <div class="c"><h3>Hackathons</h3><p>Ingenious Hackathon 5.0 at Ahmedabad University and CodeArena 2.0 at RRU.</p></div>
 </div></div></section>
@@ -157,14 +166,14 @@ section{padding:76px 0 24px}
 </div>
 <div class="row">
 <div class="ct"><b>SOC Analyst Path</b><span>Learning path</span><small>LetsDefend</small></div>
-<div class="ct"><b>OpenCV Bootcamp</b><span>Certificate of excellence, grade 100%</span><small>OpenCV University</small></div>
-<div class="ct"><b>Image Processing</b><span>With MATLAB, 100% complete</span><small>MathWorks, Aug 29, 2025</small></div>
-<div class="ct"><b>Power BI</b><span>Introduction, certificate of achievement</span><small>DataFlair, Sep – Oct 2025</small></div>
+<div class="ct"><b>Python (Basic)</b><span>Certificate</span><small>HackerRank</small></div>
+<div class="ct"><b>Modern JavaScript: ES6 Basics</b><span>Course certificate</span><small>Coursera</small></div>
+<div class="ct"><b>Bash Shell Scripting</b><span>Course certificate</span><small>Coursera</small></div>
 </div></div></div></section>
 
 <section id="contact" data-c="#ff6b6b"><div class="w"><h2 class="dc">Let’s build something secure</h2><p class="sub">Open to internships and entry-level roles in SOC, DFIR and security engineering.</p>
-<div class="bt"><a class="b p" href="https://www.linkedin.com/in/trivediaarsh/">LinkedIn</a><a class="b" href="https://github.com/TrivediAarsh51">GitHub</a><a class="b" href="https://medium.com/@trivediaarsh51">Medium</a><a class="b" href="https://tryhackme.com/p/Snowysherlock">TryHackMe</a></div>
-<p class="sub" style="margin-top:22px">Email: [add your email here]</p></div></section>
+<div class="bt"><a class="b p" href="mailto:trivediaarsh51@gmail.com">Email me</a><a class="b" href="Aarsh_Trivedi_Resume.pdf" download>Download resume</a><a class="b" href="https://www.linkedin.com/in/trivediaarsh/">LinkedIn</a><a class="b" href="https://github.com/TrivediAarsh51">GitHub</a><a class="b" href="https://medium.com/@trivediaarsh51">Medium</a><a class="b" href="https://tryhackme.com/p/Snowysherlock">TryHackMe</a></div>
+<p class="sub" style="margin-top:22px">Email: <a href="mailto:trivediaarsh51@gmail.com">trivediaarsh51@gmail.com</a></p></div></section>
 </main>
 <footer>© 2026 Aarsh Trivedi. Ahmedabad, India.</footer>
 
@@ -241,6 +250,12 @@ if(xp[j+1])gsap.to(c,{scale:.93,rotationX:6,transformPerspective:1100,ease:"none
 $(".pj").forEach(function(c){
 gsap.fromTo(c,{rotationX:75,y:90,opacity:0,transformOrigin:"50% 100%",transformPerspective:1400},{rotationX:0,y:0,opacity:1,ease:"none",scrollTrigger:ST(c,"top 96%",{end:"top 52%",scrub:.6})});
 gsap.from($("i",c),{scale:0,z:-200,opacity:0,stagger:.07,duration:.6,ease:"back.out(2)",scrollTrigger:ST(c,"top 60%")})});
+
+/* Volunteering: each card is wiped in from the left, then its points slide in one by one */
+$("#volunteering .c").forEach(function(c){
+gsap.from(c,{clipPath:"inset(0 100% 0 0)",duration:1.1,ease:"power3.out",scrollTrigger:ST(c,"top 88%")});
+gsap.from($("li",c),{x:-40,opacity:0,stagger:.18,delay:.5,duration:.6,ease:"power2.out",scrollTrigger:ST(c,"top 80%")});
+gsap.from($("i",c),{y:20,scale:.6,opacity:0,stagger:.08,delay:.9,duration:.5,ease:"back.out(2)",scrollTrigger:ST(c,"top 75%")})});
 
 /* Achievements: cards fly in from alternating sides, rings sweep */
 $("#achievements .c").forEach(function(c,j){var s=j%2?1:-1;gsap.from(c,{x:s*130,rotationY:-s*42,z:-260,opacity:0,transformPerspective:1000,duration:1.1,ease:"power3.out",scrollTrigger:ST(c,"top 92%")})});
